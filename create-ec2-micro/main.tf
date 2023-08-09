@@ -22,7 +22,7 @@ resource "aws_instance" "my_aws_instance" {
   instance_type = "${var.aws_image_size}"
   ami           = "${data.aws_ami.aws_ami.id}"
   key_name      = "${aws_key_pair.auth.id}"
-  tags = "${merge(module.camtags.tagsmap, map("Name", "${var.aws_instance_name}"))}"
+  tags = "${merge(module.camtags.tagsmap, tomap({"Name"="${var.aws_instance_name}"}))}"
 }
 
 module "camtags" {
