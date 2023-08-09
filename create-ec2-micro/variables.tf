@@ -5,19 +5,19 @@ variable "aws_image_size" {
 
 
 variable "aws_instance_name" {
-  type = "string"
+  type = string
   description = "AWS Instance Name"
   default = "projectdemo"
 }
 
 variable "aws_key_pair_name" {
-  type = "string"
+  type = string
   description = "AWS Key Pair Name"
   default = "ec2kp"
 }
 
 variable "aws_region" {
-  type = "string"
+  type = string
   description = "AWS Region"
   default = "us-east-2"
 }
@@ -28,7 +28,7 @@ variable "aws_ami_owner_id" {
 }
 
 variable "aws_image" {
-  type        = "string"
+  type        = string
   description = "Operating system image id / template that should be used when creating the virtual image"
   default     = "amzn2-ami-kernel-5.10-hvm-2.0.20220805.0-x86_64-gp2"
 }
